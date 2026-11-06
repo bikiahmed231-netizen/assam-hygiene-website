@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#123b35">
-<title>ASSAM HYGIENE | Septic Tank Cleaning Services</title>
-<meta name="description" content="ASSAM HYGIENE SEPTIC TANK CLEANING SERVICES, based in Tezpur, Assam. Contact us for septic tank cleaning and sanitation services.">
-
+<title>ASSAM HYGIENE | Septic Tank Cleaning Services - Tezpur, Assam</title>
+<meta name="description" content="ASSAM HYGIENE SEPTIC TANK CLEANING SERVICES, Tezpur, Assam. 24 Hours Service. Ghar, Hotel, Hospital, Hostel ka septic tank cleaning. Call / WhatsApp karo.">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Arial,sans-serif;color:#24332f;line-height:1.6;background:#f7faf8}
-header{background:#123b35;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header{background:#123b35;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;position:sticky;top:0;z-index:10}
 .logo{font-size:19px;font-weight:bold}
+.logo span{color:#f2bd55}
 nav a{color:white;text-decoration:none;margin-left:18px;font-size:14px}
 .hero{padding:85px 7%;background:linear-gradient(120deg,#123b35,#267c68);color:white}
 .hero h1{font-size:clamp(32px,5vw,52px);max-width:750px;line-height:1.15}
 .hero p{margin:20px 0;font-size:18px;max-width:600px;color:#e4f3ed}
+.badge{display:inline-block;background:#f2bd55;color:#183b32;padding:6px 12px;border-radius:20px;font-weight:bold;font-size:13px;margin-bottom:15px}
 .btn{display:inline-block;background:#f2bd55;color:#183b32;text-decoration:none;padding:13px 22px;border-radius:7px;font-weight:bold;margin:8px 8px 0 0}
+.btn-green{background:#25D366;color:white}
+.btn-white{background:white;color:#123b35}
 section{padding:65px 7%}
 .section-title{text-align:center;font-size:30px;color:#123b35;margin-bottom:12px}
 .sub{text-align:center;color:#66756f;margin-bottom:35px}
@@ -24,84 +48,133 @@ section{padding:65px 7%}
 .card{background:white;padding:25px;border-radius:12px;box-shadow:0 5px 20px #173c3210}
 .card h3{color:#17614f;margin-bottom:10px}
 .about{background:#eaf3ef}
+/* Booking */
+.booking{background:#fff;border:2px solid #f2bd55;border-radius:16px;padding:30px;max-width:800px;margin:0 auto}
+.booking h3{font-size:24px;color:#123b35;margin-bottom:10px;text-align:center}
+.booking p{text-align:center;color:#66756f;margin-bottom:20px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px;margin:20px 0}
+.step{background:#f7faf8;padding:18px;border-radius:10px;text-align:center}
+.step b{font-size:28px;color:#267c68;display:block}
+.coverage{background:#123b35;color:white;border-radius:12px;padding:20px;text-align:center;margin-top:20px}
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px}
+.g-item{background:#ddd;height:180px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;color:#555;font-weight:bold;overflow:hidden}
+.g-item img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+/* Reviews */
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.review{background:white;padding:22px;border-radius:12px;box-shadow:0 5px 20px #173c3210}
+.stars{color:#f2bd55;font-size:20px;margin-bottom:8px}
+.review b{color:#123b35}
+.review span{color:#66756f;font-size:13px}
 .contact{background:#123b35;color:white;text-align:center}
 .contact h2{color:white}
 .contact p{margin:12px auto;max-width:650px}
 footer{background:#0c2925;color:#d7e5df;text-align:center;padding:22px;font-size:13px}
+.float-wa{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;text-decoration:none;padding:14px 18px;border-radius:50px;font-weight:bold;box-shadow:0 5px 20px rgba(0,0,0,.3);z-index:20}
 @media(max-width:600px){
-header{padding:16px 5%}
-nav{width:100%}
-nav a{margin:0 12px 0 0}
-.hero{padding:65px 6%}
-section{padding:50px 6%}
+header{padding:16px 5%} nav{width:100%} nav a{margin:0 12px 0 0}
+.hero{padding:65px 6%} section{padding:50px 6%}
 }
 </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo">ASSAM HYGIENE</div>
+  <div class="logo">ASSAM <span>HYGIENE</span></div>
   <nav>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
-    <a href="#about">About</a>
+    <a href="#booking">Booking</a>
+    <a href="#work">Hamara Kaam</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
-
 <main>
 <section class="hero" id="home">
-  <h1>Professional Septic Tank Cleaning Services</h1>
-  <p>Reliable septic tank cleaning and sanitation services based in Tezpur, Assam. Contact us for your cleaning requirements.</p>
-  <a class="btn" href="#contact">Contact Us</a>
-  <a class="btn" href="https://wa.me/9181114169">WhatsApp Us</a>
+  <div class="badge">24 HOURS SERVICE • TEZPUR, ASSAM</div>
+  <h1>Septic Tank Full Ho Gaya? Tension Mat Lo.</h1>
+  <p>ASSAM HYGIENE - Tezpur ka bharosemand septic tank cleaning service. Ghar, Hotel, Hospital, Hostel, School sabka tank saaf karte hai. Saaf-suthra kaam, time par pahunchenge.</p>
+  <a class="btn" href="https://wa.me/919181114169?text=Namaskar%2C%20mujhe%20septic%20tank%20saaf%20karwana%20hai.%20Mera%20area%20hai%3A%20">Abhi Booking Karo - WhatsApp</a>
+  <a class="btn btn-white" href="tel:+919181114169">Call Karo - 9181114169</a>
+  <p style="font-size:14px;margin-top:15px">Tezpur • Biswanath • Gohpur • Dhekiajuli • Balipara • Jamugurihat • Sootea • Poora Assam (Bade Kaam Ke Liye)</p>
 </section>
 
 <section id="services">
-  <h2 class="section-title">Our Services</h2>
-  <p class="sub">Cleaning and sanitation services for homes and businesses.</p>
+  <h2 class="section-title">Hum Kya-Kya Karte Hai?</h2>
+  <p class="sub">Ghar se lekar bade building tak, sabka kaam karte hai.</p>
   <div class="cards">
-    <div class="card">
-      <h3>Septic Tank Cleaning</h3>
-      <p>Septic tank cleaning services for residential and commercial customers.</p>
+    <div class="card"><h3>🏠 Ghar Ka Tank</h3><p>Chota ghar ho ya bada bungalow, sabka septic tank saaf karte hai.</p></div>
+    <div class="card"><h3>🏨 Hotel / Hostel</h3><p>Hotel, Lodge, Hostel, PG ka tank - jaldi aur saaf kaam.</p></div>
+    <div class="card"><h3>🏥 Hospital / School</h3><p>Hospital, School, College ka tank - safety ke saath.</p></div>
+    <div class="card"><h3>🏢 Building / Office</h3><p>Apartment, Office, Commercial building ka bada tank bhi saaf karte hai.</p></div>
+    <div class="card"><h3>Sludge Removal</h3><p>Tank ke andar jama ganda sludge poora nikal kar le jate hai.</p></div>
+    <div class="card"><h3>Emergency Service</h3><p>Tank overflow ho gaya? Raat ko bhi call karo, hum koshish karenge jaldi aane ki.</p></div>
+  </div>
+</section>
+
+<section id="booking" style="background:#eaf3ef">
+  <h2 class="section-title">Booking Kaise Kare? Bahut Aasan Hai</h2>
+  <p class="sub">Koi form bharne ki zaroorat nahi. Bas WhatsApp karo.</p>
+  <div class="booking">
+    <h3>3 Step Me Booking Done</h3>
+    <div class="steps">
+      <div class="step"><b>1</b><strong>Call / WhatsApp Karo</strong><br>Neeche wale button par click karo</div>
+      <div class="step"><b>2</b><strong>Baat Karo</strong><br>Apna area aur tank ke baare me batao</div>
+      <div class="step"><b>3</b><strong>Time Fix Karo</strong><br>Hum time fix karke tumhare ghar aa jayenge</div>
     </div>
-    <div class="card">
-      <h3>Sludge Removal</h3>
-      <p>Removal of accumulated sludge from septic tanks.</p>
-    </div>
-    <div class="card">
-      <h3>Waste Removal</h3>
-      <p>Septic waste removal services with a focus on responsible handling.</p>
-    </div>
-    <div class="card">
-      <h3>Sanitation Services</h3>
-      <p>Contact us to discuss your sanitation service requirements.</p>
-    </div>
+    <p style="text-align:center"><a class="btn btn-green" href="https://wa.me/919181114169?text=Namaskar%2C%20mujhe%20septic%20tank%20saaf%20karwana%20hai.%20Mera%20area%20hai%3A%20">WhatsApp Par Booking Karo</a></p>
+    <div class="coverage"><strong>Hum Kaha-Kaha Jaate Hai?</strong><br>Tezpur - Biswanath - Gohpur - Dhekiajuli - Balipara - Jamugurihat - Sootea<br>Bade kaam ke liye poora Assam</div>
+  </div>
+</section>
+
+<section id="work">
+  <h2 class="section-title">Hamara Kaam Dekho</h2>
+  <p class="sub">Photo dekh kar hi pata chalega hum kaam kaise karte hai.</p>
+  <div class="gallery">
+    <div class="g-item">Photo 1 - Yaha apni Bolero Gaadi ki photo daalo</div>
+    <div class="g-item">Photo 2 - Tank saaf karte hue photo</div>
+    <div class="g-item">Photo 3 - Pipe se kaam karte hue</div>
+    <div class="g-item">Photo 4 - Kaam ke baad saaf jagah</div>
+    <div class="g-item">Photo 5 - Worker safety dress me</div>
+    <div class="g-item">Photo 6 - Bade building ka kaam</div>
+  </div>
+  <p style="text-align:center;margin-top:20px;color:#66756f">Apni 6 photo kheench kar in jagah par daal dena. Photo ka naam same rakhna hai to mujhe bata dena, main link kar dunga.</p>
+</section>
+
+<section id="reviews" style="background:#eaf3ef">
+  <h2 class="section-title">Log Kya Bolte Hai?</h2>
+  <p class="sub">Hamare customer ka bharosa hi hamari pehchan hai.</p>
+  <div class="reviews">
+    <div class="review"><div class="stars">★★★★★</div><p>"Time par aaye, kaam ekdum saaf kiya. Jagah bhi gandi nahi chhodi. Bahut badhiya service."</p><br><b>Ramesh Ji</b><br><span>Tezpur</span></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Hotel ka tank full ho gaya tha, raat ko call kiya to subah aa gaye. Kaam jaldi ho gaya."</p><br><b>Hotel Owner</b><br><span>Biswanath</span></div>
+    <div class="review"><div class="stars">★★★★★</div><p>"Pehle baat ki, sab samjhaya, fir kaam kiya. Rate me bhi koi jhamela nahi. Professional log hai."</p><br><b>School Committee</b><br><span>Gohpur</span></div>
   </div>
 </section>
 
 <section class="about" id="about">
-  <h2 class="section-title">About Us</h2>
-  <p class="sub">Your local septic tank cleaning service in Tezpur, Assam.</p>
-  <div class="card">
-    <p>ASSAM HYGIENE SEPTIC TANK CLEANING SERVICES is based in Tezpur, Assam. We aim to provide dependable septic tank cleaning and sanitation services to residential and commercial customers. Our focus is on reliable service, honest work and customer satisfaction.</p>
+  <h2 class="section-title">Hum Par Bharosa Kyu Kare?</h2>
+  <div class="cards">
+    <div class="card"><h3>✅ Saaf-Suthra Kaam</h3><p>Kaam ke baad jagah ko saaf karke jayenge, ganda nahi chhodenge.</p></div>
+    <div class="card"><h3>⏰ Time Par Pahunchenge</h3><p>Jo time bola hai, usi time par pahuchne ki poori koshish karenge.</p></div>
+    <div class="card"><h3>🤝 Seedhi Baat</h3><p>Pehle baat karenge, sab samjhayenge, fir kaam karenge. Koi chhupa hua charge nahi.</p></div>
   </div>
+  <br>
+  <div class="card"><p>ASSAM HYGIENE SEPTIC TANK CLEANING SERVICES, Tezpur, Assam se hai. Hamara focus hai - dependable service, honest work aur customer satisfaction.</p></div>
 </section>
 
 <section id="contact" class="contact">
-  <h2 class="section-title">Contact Us</h2>
-  <p>Need septic tank cleaning? Get in touch with us to discuss your requirements.</p>
+  <h2 class="section-title">Abhi Baat Karo</h2>
+  <p>Tank full ho gaya hai? Der mat karo, abhi call ya WhatsApp karo.</p>
   <p><strong>Location:</strong> Tezpur, Assam</p>
-  <a class="btn" href="tel:+919181114169">Call Us</a>
-  <a class="btn" href="https://wa.me/9181114169">WhatsApp Us</a>
+  <p><strong>Service Area:</strong> Tezpur + Aas-paas + Poora Assam (Bade Kaam Ke Liye)</p>
+  <a class="btn" href="tel:+919181114169">Call Karo - 9181114169</a>
+  <a class="btn btn-green" href="https://wa.me/919181114169?text=Namaskar%2C%20mujhe%20septic%20tank%20saaf%20karwana%20hai.">WhatsApp Karo</a>
 </section>
 </main>
-
 <footer>
   <p>© 2026 ASSAM HYGIENE SEPTIC TANK CLEANING SERVICES.</p>
   <p>Based in Tezpur, Assam | All Rights Reserved.</p>
 </footer>
-
-</body>
+<a class="float-wa" href="https://wa.me/919181114169?text=Namaskar%2C%20mujhe%20septic%20tank%20saaf%20karwana%20hai.">WhatsApp</a>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
 </html>
